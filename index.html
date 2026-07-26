@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Titre & description ── -->
+  <title>Emery Savio — Entrepreneur & Afritransformateur | E-Connect Society</title>
+  <meta name="description"
+    content="Emery Savio, entrepreneur africain avec +16 ans d'expérience, fondateur de E-Connect Society Holding et du Cluster Metanoa & Vie. Logistique, digital, social business en Afrique Sub-saharienne." />
+  <meta name="author" content="Emery Savio" />
+  <meta name="robots" content="index, follow" />
+  <!-- ⚠️ À REMPLACER : mets ton vrai nom de domaine ici et dans toutes les balises og: ci-dessous -->
+  <link rel="canonical" href="https://YOUR_DOMAIN.com/" />
+
+  <!-- ── Open Graph (Facebook, WhatsApp, LinkedIn) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/" />
+  <meta property="og:title" content="Emery Savio — The Self Made Man | Afritransformateur" />
+  <meta property="og:description"
+    content="Fondateur de E-Connect Society, Emery Savio a bâti un écosystème de 5 technopôles actives en Afrique Sub-saharienne : logistique, digital, social business." />
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/assets/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Emery Savio" />
+
+  <!-- ── Twitter / X Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Emery Savio — The Self Made Man | Afritransformateur" />
+  <meta name="twitter:description"
+    content="Fondateur de E-Connect Society, 5 technopôles, +120 emplois créés, présent au Mali, Sénégal, Cameroun & Guinée Conakry." />
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/assets/og-cover.jpg" />
+
+  <!-- ── Thème mobile ── -->
+  <meta name="theme-color" content="#080808" />
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/png" href="assets/EMERY-SAVIO.png" />
+  <link rel="apple-touch-icon" href="assets/EMERY-SAVIO.png" />
+
+  <!-- ── Fonts & Icons ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ── Formspree : aucune lib à charger, juste fetch() ── -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ── Données structurées (SEO) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Emery Savio",
+    "jobTitle": "Entrepreneur & Afritransformateur",
+    "url": "https://YOUR_DOMAIN.com/",
+    "image": "https://YOUR_DOMAIN.com/assets/og-cover.jpg",
+    "email": "mailto:emerysavio@e-connectsociety.com",
+    "telephone": "+22376049729",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "E-Connect Society",
+      "url": "https://YOUR_DOMAIN.com/"
+    },
+    "sameAs": []
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Curseur -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Navigation -->
+
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="assets/EMERY-SAVIO.png" alt="Emery Savio">
+    </a>
+
+    <!-- Desktop links (inchangés) -->
+    <ul class="nav-links">
+      <li><a href="#about">Biographie</a></li>
+      <li><a href="#services">Réalisations</a></li>
+      <li><a href="#projects">Écosystème</a></li>
+      <li><a href="#metanoia">Metanoa & Vie</a></li>
+      <li><a href="#testimonials">Avis</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Burger (mobile uniquement) -->
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false">
+      <span class="burger-line burger-line--top"></span>
+      <span class="burger-line burger-line--mid"></span>
+      <span class="burger-line burger-line--bot"></span>
+    </button>
+  </nav>
+
+  <!-- Drawer mobile (en dehors de la nav pour le z-index) -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <!-- Backdrop flou -->
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <!-- Panneau latéral -->
+    <div class="drawer-panel">
+      <!-- Logo en haut du drawer -->
+      <div class="drawer-top">
+        <img src="assets/EMERY-SAVIO.png" alt="Emery Savio" class="drawer-logo">
+        <button class="drawer-close" id="drawerClose" aria-label="Fermer le menu">
+          <svg viewBox="0 0 24 24">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Liens -->
+      <ul class="drawer-links">
+        <li><a href="#about" class="drawer-link" data-num="01">Biographie</a></li>
+        <li><a href="#services" class="drawer-link" data-num="02">Réalisations</a></li>
+        <li><a href="#projects" class="drawer-link" data-num="03">Écosystème</a></li>
+        <li><a href="#metanoia" class="drawer-link" data-num="04">Metanoa & Vie</a></li>
+        <li><a href="#testimonials" class="drawer-link" data-num="05">Avis</a></li>
+        <li><a href="#contact" class="drawer-link" data-num="06">Contact</a></li>
+      </ul>
+
+      <!-- CTA bas du drawer -->
+      <div class="drawer-footer">
+        <a href="#contact" class="btn-primary drawer-cta">Me contacter</a>
+        <p class="drawer-tagline">The Connecting Company</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <span class="hero-line"></span>
+    <p class="hero-eyebrow">The Self Made Man | Entrpreneur | Afritransformaliste</p>
+    <h1 class="hero-title"><strong>Emery</strong><br /><strong style="color: #C9A84C;;">Savio</strong></h1>
+    <p class="hero-sub"><!--16 ans de construction. Un écosystème.--> Je suis la réponse de Dieux aux questions des
+      Hommes, la solution de Dieux aux problème des Hommes.</p>
+    <p class="hero-desc">
+      Visionnaire éclairé, parti de rien, comme de la poussière pour être tondu en turbant royal j'ai bâti une holding
+      structurée de 5 technopôles actives en Afrique Sub-saherienne.
+      Logistique, communication digital, marketing mobile, promotion des activités de développement économique, social
+      business — chaque brique posée en parfaite adéquation avec la vision et les missions de.
+      <em style="color:var(--or);font-style:normal;">La Connecting Company.</em>
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">Voir mes projets</a>
+      <a href="#contact" class="btn-ghost">Me contacter</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Défiler
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="16">0</div>
+      <div class="stat-label">Années d'expérience</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="5">0</div>
+      <div class="stat-label">Entreprises fondées</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="120">0</div>
+      <div class="stat-label">Emplois créés</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="4">0</div>
+      <div class="stat-label">Pays d'implantation</div>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="about">
+    <div class="about-visual reveal">
+      <div class="about-photo">
+        <div class="photo-placeholder">
+          <div class="photo-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </div>
+          <span>Votre photo ici</span>
+        </div>
+      </div>
+      <div class="about-accent"></div>
+    </div>
+    <div class="about-content reveal">
+      <p class="section-eyebrow">Biographie</p>
+      <h2 class="section-title">The Self Made <em>Man</em></h2>
+      <p class="about-text">
+        Emery Savio est un entrepreneur Africain avec +16 ans d'expérience au compteur.
+        Pas d'héritage, pas de raccourci — une trajectoire construite avec le renouvellement de l'intelligence et par la
+        force créatrice du travail,
+        de la vision, la mission et d'une conviction profonde , plus qu'une simple vue de l'esprit : l'Afrique
+        Sub-saherienne est un terrain
+        d'opportunités infinies pour ceux qui osent s'y engager vraiment au service de leur communauté de façon utile.
+      </p>
+      <p class="about-text">
+        De la logistique au digital, en passant par la promotion des activités économiques au social business pour
+        atteindre l'afritransformalismes,
+        il a bâti un écosystème complet sous la bannière <strong style="color:var(--or-clair)">E-Connect
+          Society et le Cluster Metanoa & Vie</strong> —
+        The Connecting Company. Sa mission : connecter les Hommes, les idées et les marchés
+        pour générer un impact durable sur le continent.
+      </p>
+      <div class="about-values">
+        <div class="value-item">
+          <div class="value-dot"></div>
+          <div>
+            <strong>Impact avant profit</strong>
+            <p>Chaque entreprise que je bâtis doit d'abord répondre à un besoin concret.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-dot"></div>
+          <div>
+            <strong>Excellence sans compromis</strong>
+            <p>Les détails font la différence entre une bonne et une grande entreprise.</p>
+          </div>
+        </div>
+        <div class="value-item">
+          <div class="value-dot"></div>
+          <div>
+            <strong>Réseaux & Partnerships</strong>
+            <p>Les meilleures opportunités naissent de relations durables et authentiques.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-header reveal">
+      <div>
+        <p class="section-eyebrow">Ce que je fais</p>
+        <h2 class="section-title" style="margin-bottom:0">Domaines d'<em>expertise</em></h2>
+        <p style="color:#666;font-size:1rem;line-height:1.8;max-width:620px;margin-top:16px;">Emery Savio vous donne les
+          clés et les codes de vie qui permettent d'entamer le processus qui vous fait partir <strong> de la pauvrété à
+            la stabilité, de la stabilité à la réussite, de la réussite au succès, du succès à l'impact</strong></p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="m2 17 10 5 10-5" />
+            <path d="m2 12 10 5 10-5" />
+          </svg>
+        </div>
+        <h3 class="service-name">Création d'entreprises</h3>
+        <p class="service-desc">De l'idée au lancement opérationnel : structuration juridique, modèle d'affaires, levée
+          de fonds et mise en marché sur les marchés sub-saherienne.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+        </div>
+        <h3 class="service-name">Stratégie & Croissance</h3>
+        <p class="service-desc"> Expertise Local & Norme Internationale: Développement de plans de croissance adaptés
+          aux réalités des marchés émergents, aux
+          contraintes locales et aux ambitions régionales.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+            <path d="M7 10.5C7.5 8 9.5 6.5 12 6.5s4.5 1.5 5 4" />
+            <path d="M17 13.5C16.5 16 14.5 17.5 12 17.5S7.5 16 7 13.5" />
+            <line x1="12" y1="6.5" x2="12" y2="17.5" />
+          </svg>
+        </div>
+        <h3 class="service-name">Afritransformateur</h3>
+        <p class="service-desc">Accompagnement de structures et d'individus vers une transformation durable — en lien
+          avec les valeurs de Metanoa & Vie Cluster : Transformation · Accomplissement · Impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets / Écosystème -->
+  <section id="projects">
+    <div class="reveal">
+      <p class="section-eyebrow">L'écosystème</p>
+      <h2 class="section-title"><em>The Connecting Company</em> — un écosystème de vie et de structure de vie bâti
+        brique par brique.</h2>
+      <p style="color:#666;font-size:1rem;line-height:1.8;max-width:620px;margin-top:16px;">
+        Depuis 2013, chaque structure créée répond à un besoin spécifique de la vie.
+        Ensemble, elles forment un réseau cohérent : connecter les Hommes, les idées et les marchés.
+      </p>
+    </div>
+
+    <!-- Holding en vedette -->
+    <div class="holding-card reveal">
+      <div class="holding-visual">
+
+        <img src="assets/E-connect-NOIR.png" alt="E-connect">
+        <div class="overlay"></div>
+
+        <div class="holding-visual-text">
+          <span class="holding-label">Holding · Fondée en 2021</span>
+          <div class="holding-name-big">E-Connect Society</div>
+          <div class="holding-tagline">The Connecting Company</div>
+        </div>
+      </div>
+      <div class="holding-desc">
+        <p>Structure faîtière qui chapeaute l'ensemble de l'écosystème. E-Connect Society Holding incarne la vision d'un
+          entrepreneur qui, après 8 ans de construction terrain, a structuré ses activités en une holding cohérente — où
+          chaque technopôle se renforce mutuellement.</p>
+        <div class="holding-tags">
+          <span class="htag">Mali</span>
+          <span class="htag">Sénégal</span>
+          <span class="htag">Cameroun</span>
+          <span class="htag">Guinée Conakry</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grille filiales -->
+    <div class="filiales-grid">
+
+      <div class="filiale-card reveal">
+        <div class="filiale-header">
+          <div class="filiale-icon">
+            <img src="assets/SLC.png" alt="SLC">
+          </div>
+          <div class="filiale-year">2013</div>
+        </div>
+        <h3 class="filiale-name">SLC</h3>
+        <p class="filiale-full">Security-Logistics & Services</p>
+        <p class="filiale-desc">Entreprise de logistique et de prestation de services. Première pierre de l'édifice, SLC
+          a forgé la rigueur opérationnelle qui irrigue toute la holding.</p>
+        <div class="filiale-footer">
+          <span class="filiale-tag">Logistique</span>
+          <span class="filiale-geo">🇲🇱 Mali</span>
+        </div>
+      </div>
+
+      <div class="filiale-card reveal">
+        <div class="filiale-header">
+          <div class="filiale-icon">
+            <img src="assets/Osmoses.png" alt="Osmose Digital">
+          </div>
+          <div class="filiale-year">2017</div>
+        </div>
+        <h3 class="filiale-name">Osmose Digital</h3>
+        <p class="filiale-full">Agence de Communication digitale & Marketing Mobile</p>
+        <p class="filiale-desc">Stratégie digitale, création de contenu et outil marketing mobile pour les entreprises,
+          organisations, institutions, marques, et particuliers qui
+          veulent s'imposer dans l'économie connectée de l'Afrique Sub-saherienne.</p>
+        <div class="filiale-footer">
+          <span class="filiale-tag">Communication Digitale</span>
+          <span class="filiale-geo">🇲🇱 Mali</span>
+        </div>
+      </div>
+
+      <div class="filiale-card reveal">
+        <div class="filiale-header">
+          <div class="filiale-icon">
+            <img src="assets/Bantoons.png" alt="Bantoo AfreeCom">
+          </div>
+          <div class="filiale-year">2018</div>
+        </div>
+        <h3 class="filiale-name">Bantoo Afreecom</h3>
+        <p class="filiale-full">Promotion des activités de Développement Économique</p>
+        <p class="filiale-desc">Conférences, Salons professionnels, Journées Portes Ouvertes, Rencontres B2B et
+          Réseautage de haut niveau. Bantoo crée les espaces où l'Afrique new deal fait des affaires win win.</p>
+        <div class="filiale-footer">
+          <span class="filiale-tag">Promotion des activités</span>
+          <span class="filiale-geo">🇲🇱 🇸🇳 🇨🇲</span>
+        </div>
+      </div>
+
+      <div class="filiale-card filiale-featured reveal">
+        <div class="filiale-header">
+          <div class="filiale-icon">
+            <img src="assets/Blue.png" alt="Blue">
+          </div>
+          <div class="filiale-year">2021+</div>
+        </div>
+        <h3 class="filiale-name">BleuPhygital</h3>
+        <p class="filiale-full">Cluster Phygital · Social · Business · Disruptif · Décentralisé </p>
+        <p class="filiale-desc">La plus grande communauté de jeunes connectés au Mali, au Sénégal et en Guinée Conakry.
+          Un écosystème fait de Lifestyle, Réussite & Divertissement utile — où la jeunesse africaine urbaine
+          sub-saherienne se retrouve, se construit
+          et s'élève.</p>
+        <div class="filiale-footer">
+          <span class="filiale-tag">Communauté</span>
+          <span class="filiale-geo">🇲🇱 🇸🇳 🇬🇳</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Metanoa & Vie Cluster -->
+  <section id="metanoia" style="padding:120px 60px;background:var(--noir-2);">
+    <div class="reveal" style="max-width:900px;margin:0 auto;text-align:center;">
+      <p class="section-eyebrow" style="justify-content:center;">Engagement international</p>
+      <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.2rem);">Metanoa <em>&</em> Vie Cluster</h2>
+      <p style="color:#666;font-size:1rem;line-height:1.9;max-width:640px;margin:0 auto 60px;">
+        Organisation internationale dédiée à la transformation de vie et de structures
+        humaines. Emery Savio est le fondateur de ce cluster qui œuvre à impacter
+        l'humain dans sa globalité — au-delà du seul entrepreneuriat.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:60px;">
+        <div style="background:var(--noir-3);padding:48px 32px;border-top:2px solid var(--or);">
+          <div style="font-size:2rem;margin-bottom:16px;color:var(--or);"><i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <div
+            style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.1rem;font-weight:700;color:var(--blanc);margin-bottom:12px;letter-spacing:0.05em;">
+            TRANSFORMATION</div>
+          <p style="color:#666;font-size:0.83rem;line-height:1.7;">Accompagner la transformation profonde de l'individu
+            et de
+            ses structures de vie — une métamorphose réelle et durable.</p>
+        </div>
+        <div style="background:var(--noir-3);padding:48px 32px;border-top:2px solid var(--or);">
+          <div style="font-size:2rem;margin-bottom:16px;color:var(--or);"><i class="fa-solid fa-trophy"></i></div>
+          <div
+            style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.1rem;font-weight:700;color:var(--blanc);margin-bottom:12px;letter-spacing:0.05em;">
+            ACCOMPLISSEMENT</div>
+          <p style="color:#666;font-size:0.83rem;line-height:1.7;">Aider chacun à réaliser son plein potentiel —
+            personnel, professionnel, spirituel — en alignement avec sa vision.</p>
+        </div>
+        <div style="background:var(--noir-3);padding:48px 32px;border-top:2px solid var(--or);">
+          <div style="font-size:2rem;margin-bottom:16px;color:var(--or);"><i class="fa-solid fa-globe-africa"></i></div>
+          <div
+            style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.1rem;font-weight:700;color:var(--blanc);margin-bottom:12px;letter-spacing:0.05em;">
+            IMPACT</div>
+          <p style="color:#666;font-size:0.83rem;line-height:1.7;">Générer un impact mesurable et positif sur l'humain,
+            la communauté pour les générations présentes sans toute fois compromettre celles du futures.</p>
+        </div>
+      </div>
+      <div style="border:1px solid rgba(201,168,76,0.2);padding:32px 48px;display:inline-block;">
+        <p style="font-style:italic;color:var(--or-clair);font-size:1.05rem;letter-spacing:0.04em;">
+          « La plus grande révolution est celle que l'on opère d'abord en soi-même. »
+        </p>
+        <p style="color:#555;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;margin-top:12px;">Metanoa
+          & Vie Cluster — Organisation Internationale</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section id="testimonials">
+    <div class="reveal">
+      <p class="section-eyebrow">Ce qu'ils disent</p>
+      <h2 class="section-title">Témoignages</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">« Savio a une capacité rare à voir les opportunités là où les autres voient des
+          obstacles. Son accompagnement a été déterminant pour notre expansion régionale. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">KT</div>
+          <div>
+            <div class="author-name">Kofi Tetteh</div>
+            <div class="author-role">CEO, GhanaGrow — Accra</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">« Son réseau et sa compréhension des enjeux du business nous ont permis de lever
+          notre
+          premier tour de table en un temps record. Un partenaire exceptionnel. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AB</div>
+          <div>
+            <div class="author-name">Aminata Bah</div>
+            <div class="author-role">Fondatrice, EduConnect — Dakar</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">« La clarté de sa vision stratégique et sa capacité à simplifier la complexité ont
+          transformé notre startup en entreprise structurée et profitable en 3 ans. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">IC</div>
+          <div>
+            <div class="author-name">Ibrahim Coulibaly</div>
+            <div class="author-role">DG, Sahel Logistique — Bamako</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="gallery-header reveal">
+      <p class="section-eyebrow">Galerie</p>
+      <h2 class="section-title">Moments <em>&</em> Terrain</h2>
+      <p class="gallery-subtitle">L'écosystème en action — conférences, lancements, réseautage et rencontres qui forgent
+        l'Afrique de demain.</p>
+    </div>
+
+    <!-- Carrousel principal -->
+    <div class="gallery-stage">
+      <div class="gallery-track" id="galleryTrack">
+
+        <!-- Carte 1 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/Bantoons.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Bantoo Afreecom</span>
+              <span class="gcard-caption">Forum B2B · Bamako 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="gcard gcard--wide">
+          <div class="gcard-img" style="background-image:url('assets/Blue.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">E-Connect Society</span>
+              <span class="gcard-caption">Assemblée des partenaires · 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/Osmoses.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Osmose Digital</span>
+              <span class="gcard-caption">Lancement campagne · Dakar 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/Blue.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">BleuPhygital</span>
+              <span class="gcard-caption">Community Event · Conakry 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div class="gcard gcard--tall">
+          <div class="gcard-img" style="background-image:url('assets/E-connect-NOIR.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Metanoa & Vie</span>
+              <span class="gcard-caption">Séminaire Transformation · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/SLC.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">SLC</span>
+              <span class="gcard-caption">Opérations logistiques · Mali 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 7 -->
+        <div class="gcard gcard--wide">
+          <div class="gcard-img" style="background-image:url('assets/Bantoons.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Bantoo Afreecom</span>
+              <span class="gcard-caption">Salon Portes Ouvertes · Abidjan 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 8 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/E-connect-NOIR.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Emery Savio</span>
+              <span class="gcard-caption">Conférence Afritransformalismes · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 9 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/Blue.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">BleuPhygital</span>
+              <span class="gcard-caption">Lifestyle Night · Bamako 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 10 -->
+        <div class="gcard gcard--wide">
+          <div class="gcard-img" style="background-image:url('assets/E-connect-NOIR.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">E-Connect Society</span>
+              <span class="gcard-caption">Signing Ceremony · Dakar 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 11 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/Osmoses.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Osmose Digital</span>
+              <span class="gcard-caption">Studio Création · Bamako 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 12 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/EMERY-SAVIO.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Metanoa & Vie</span>
+              <span class="gcard-caption">Retraite Impact Leaders · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 13 -->
+        <div class="gcard gcard--tall">
+          <div class="gcard-img" style="background-image:url('assets/EMERY-SAVIO.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Emery Savio</span>
+              <span class="gcard-caption">Portrait Terrain · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 14 -->
+        <div class="gcard gcard--wide">
+          <div class="gcard-img" style="background-image:url('assets/Bantoons.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">Bantoo Afreecom</span>
+              <span class="gcard-caption">Networking Summit · Douala 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carte 15 -->
+        <div class="gcard">
+          <div class="gcard-img" style="background-image:url('assets/E-connect-NOIR.png')">
+            <div class="gcard-overlay"></div>
+            <div class="gcard-label">
+              <span class="gcard-tag">E-Connect Society</span>
+              <span class="gcard-caption">Vision 2030 · Bamako 2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /gallery-track -->
+
+      <!-- Flèches de navigation -->
+      <button class="gallery-arrow gallery-arrow--prev" id="galleryPrev" aria-label="Précédent">
+        <svg viewBox="0 0 24 24">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="gallery-arrow gallery-arrow--next" id="galleryNext" aria-label="Suivant">
+        <svg viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Barre de progression + compteur -->
+    <div class="gallery-controls">
+      <div class="gallery-progress-bar">
+        <div class="gallery-progress-fill" id="galleryProgress"></div>
+      </div>
+      <div class="gallery-counter">
+        <span id="galleryCurrentNum">01</span>
+        <span class="gallery-counter-sep">/</span>
+        <span class="gallery-counter-total">15</span>
+      </div>
+      <div class="gallery-dots" id="galleryDots"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="gallery-lightbox" id="galleryLightbox">
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <div class="lightbox-content">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+        <div class="lightbox-info" id="lightboxInfo"></div>
+        <button class="lightbox-close" id="lightboxClose">
+          <svg viewBox="0 0 24 24">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <button class="lightbox-nav lightbox-nav--prev" id="lightboxPrev">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <button class="lightbox-nav lightbox-nav--next" id="lightboxNext">
+          <svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+
+  <div class="contact" id="contact">
+    <div class="reveal">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Co-Construisons <em>ensemble</em></h2>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <p style="color:#777;line-height:1.9;font-size:0.95rem;margin-bottom:8px;">
+          Vous avez un projet ambitieux ? Une idée à concrétiser ?
+          Ou simplement envie d'échanger sur les opportunités d'affaires
+          en Afrique sub-saharienne ? Je suis disponible.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:emerysavio@e-connectsociety.com" class="contact-link">
+            <div class="contact-link-icon"><i class="fa-solid fa-envelope"></i></div>
+            emerysavio@e-connectsociety.com
+          </a>
+          <a href="tel:+22376049729" class="contact-link">
+            <div class="contact-link-icon"><i class="fa-solid fa-phone"></i></div>
+            +223 76 04 97 29
+          </a>
+          <!-- ⚠️ À REMPLACER : mets ta vraie URL LinkedIn ici -->
+          <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <div class="contact-link-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            LinkedIn — Emery Savio
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="contact-form">
+          <div class="form-group">
+            <label class="form-label" for="cf-name">Votre nom</label>
+            <input type="text" id="cf-name" name="name" class="form-input" placeholder="Ex. Moussa Traoré" required
+              autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-email">E-mail</label>
+            <input type="email" id="cf-email" name="email" class="form-input" placeholder="vous@example.com" required
+              autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-subject">Sujet</label>
+            <select id="cf-subject" name="subject" class="form-input form-select">
+              <option value="" disabled selected>Choisir un sujet…</option>
+              <option value="Partenariat Business">Partenariat Business</option>
+              <option value="Investissement">Investissement</option>
+              <option value="Accompagnement / Coaching">Accompagnement / Coaching</option>
+              <option value="Metanoa & Vie Cluster">Metanoa & Vie Cluster</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" class="form-textarea"
+              placeholder="Décrivez votre projet ou votre demande…" required></textarea>
+          </div>
+
+          <!-- Honeypot anti-spam (invisible) -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <button type="button" class="btn-primary btn-send" id="cfSubmit"
+            style="border:none;cursor:pointer;width:100%;justify-content:center;">
+            <span class="btn-send-label">Envoyer le message</span>
+            <span class="btn-send-spinner" aria-hidden="true"></span>
+          </button>
+
+          <!-- États du formulaire -->
+          <div id="cf-success" class="form-state form-state--success" role="alert" style="display:none;">
+            <svg viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Message envoyé — je vous réponds sous 48h*.
+          </div>
+          <div id="cf-error" class="form-state form-state--error" role="alert" style="display:none;">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+            Envoi échoué — vérifiez votre connexion ou écrivez directement à
+            <a href="mailto:emerysavio@e-connectsociety.com">emerysavio@e-connectsociety.com</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-logo"><img src="assets/EMERY-SAVIO.png" alt="Emery Savio"></div>
+      <div class="footer-copy">© 2026 E-Connect Society — Tous droits réservés</div>
+      <div class="footer-social">
+        <!-- ⚠️ À REMPLACER : mets tes vraies URLs de réseaux sociaux ici -->
+        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+          </svg>
+        </a>
+        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
