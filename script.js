@@ -205,7 +205,7 @@ if (statsSection) statsObserver.observe(statsSection);
 
 // ⚠️ À REMPLACER : mets ton vrai ID de formulaire Formspree ci-dessous
 // (créé sur https://formspree.io — Dashboard > New Form > copie l'ID après "f/")
-const FORMSPREE_ID = 'YOUR_FORM_ID';
+const FORMSPREE_ID = 'https://formspree.io/f/xdaqyaez';
 
 const cfSubmit = document.getElementById('cfSubmit');
 const cfSuccess = document.getElementById('cf-success');
